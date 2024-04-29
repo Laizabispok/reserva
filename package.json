@@ -1,0 +1,16 @@
+{
+  "name": "reserva",
+  "version": "1.0.0",
+  "description": "Projeto criado na Linguagem de Programação\r Curso: Técnico em informática integrado ao ensino médio\r Instituto federal de São Paulo - Campus Caraguatatuba",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node.JS",
+    "MongoDB",
+    "JavaScript"
+  ],
+  "author": "Láiza Bispo",
+  "license": "MIT"
+}
