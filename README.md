@@ -16,4 +16,7 @@ Instituto federal de São Paulo - Campus Caraguatatuba
 *multer
 *yup
 *cors
+
 #### Banco de dados: MongoDB
+
+Autor: **Láiza Vitória da Silva Bispo**
