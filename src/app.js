@@ -10,7 +10,10 @@ dotenv.config()
 class App {
     constructor(){
         this.server = express()
-        mongoose.connect(process.env.DATABASE, {})
+        mongoose.connect(process.env.DATABASE, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        })
         this.middlewares()
         this.routes()
     }

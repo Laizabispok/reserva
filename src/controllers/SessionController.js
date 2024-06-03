@@ -6,24 +6,24 @@ update: quando queremos alterar alguma sessao
 destroy (delete): quando queremos deletar uma sessao
 */
 
-import User from '../models/User'
-import * as Yuo from 'yup'
+import User from '../models/User';
+import * as Yup from 'yup';
 
 class SessionController {
-    async store(req,res) {
-     const schema = Yup.object().shape({
-         email: yup.string().email().required(),
-        })
-     const { email } = req.body
-     if(!(await schema.isValid(req.osy))) {
-        return res.status(400).json({ error: 'Falha na validação'})
-        } 
-        let user = await User.findOne({ email})
-        if(!user) {
-            user = await User.create({ email})
-        }  
-        return res.json(user)
+  async store(req, res) {
+    const schema = Yup.object().shape({
+      email: Yup.string().email().required(),
+    });
+    const { email } = req.body;
+    if (!(await schema.isValid(req.body))) {
+      return res.status(400).json({ error: 'Falha na validação' });
     }
+    let user = await User.findOne({ email });
+    if (!user) {
+      user = await User.create({ email });
+    }
+    return res.json(user);
+  }
 }
 
-export default new SessionController()
+export default new SessionController();
