@@ -12,12 +12,13 @@ const HouseSchema = new Schema({
     }
 }, {
     ToJSON: {
-        virtuals: true
+        virtuals: true 
+        //"virtuals": Unknown word.
     }
 })
 
 HouseSchema.virtual('thumbnail_url').get(function() {
-    return`http://localhost:4000/files/${this.thumbnail}`
+    return`http://localhost:4500/files/${this.thumbnail}`
 })
 
 export default model('House', HouseSchema)
