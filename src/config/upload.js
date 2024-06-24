@@ -3,7 +3,7 @@ import path from 'path'
 
 export default {
     setorage: multer.diskStorage({
-        destination:path.resolve(__dirname, '..', '..', 'uploads'), filename:( req, res, cb) => {
+        destination:path.resolve(__dirname, '..', '..', 'uploads'), filename:( req, file, cb) => {
         const ext = path.extname(file.orignalname);
         const name = path.basename(file.orignalname, ext);
         cb(null, `${name}-${Date.now()}${ext}`)
